@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f4f9ff;
+  --foreground: #0b1b34;
+
+  --brand-50: #f0f8ff;
+  --brand-100: #e0f0ff;
+  --brand-200: #b9e1ff;
+  --brand-300: #86ccff;
+  --brand-400: #4db4ff;
+  --brand-500: #1f9dff;
+  --brand-600: #0b7fe0;
+  --brand-700: #0a63af;
+  --brand-800: #0d4f88;
+  --brand-900: #0f3f6e;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand-50: var(--brand-50);
+  --color-brand-100: var(--brand-100);
+  --color-brand-200: var(--brand-200);
+  --color-brand-300: var(--brand-300);
+  --color-brand-400: var(--brand-400);
+  --color-brand-500: var(--brand-500);
+  --color-brand-600: var(--brand-600);
+  --color-brand-700: var(--brand-700);
+  --color-brand-800: var(--brand-800);
+  --color-brand-900: var(--brand-900);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.text-gradient-brand {
+  background-image: linear-gradient(90deg, var(--brand-600), var(--brand-400));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.grid-glow {
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(31, 157, 255, 0.16), transparent 45%),
+    radial-gradient(circle at 85% 0%, rgba(31, 157, 255, 0.12), transparent 40%),
+    linear-gradient(to bottom, #ffffff, #eef7ff);
+}
+
+.card-surface {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(11, 127, 224, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
