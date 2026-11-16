@@ -1,81 +1,83 @@
 # AutoNova
 
-Landing page untuk jasa dan toko automasi bisnis. Dibangun dengan Next.js (App Router, TypeScript, Tailwind CSS v4) dan animasi dari Motion (motion.dev).
+Bahasa Indonesia version: [readme.id.md](readme.id.md)
 
-## Ringkasan
+Landing page for business automation services and store. Built with Next.js (App Router, TypeScript, Tailwind CSS v4) and animations from Motion (motion.dev).
 
-AutoNova menampilkan satu halaman utama yang menggabungkan dua sisi bisnis:
+## Overview
 
-- Jasa automasi: konsultasi, integrasi sistem, instalasi smart automation, maintenance, dan audit proses bisnis.
-- Toko automasi: perangkat siap pakai seperti hub kontrol pintar, sensor IoT, lisensi software workflow, dan starter kit robotic arm.
+AutoNova presents a single main page that combines two sides of the business:
 
-Seluruh ikon pada halaman menggunakan komponen SVG kustom, bukan karakter emoji, sesuai kebijakan zero-emoji proyek ini.
+- Automation services: consulting, system integration, smart automation installation, maintenance, and business process audits.
+- Automation store: ready-to-use devices such as smart control hubs, IoT sensors, workflow software licences, and robotic arm starter kits.
 
-## Teknologi
+All icons on the page use custom SVG components, not emoji characters, in line with this project's zero-emoji policy.
+
+## Technologies
 
 - Next.js 16 (App Router, Turbopack)
-- React 19 dan TypeScript
-- Tailwind CSS v4 (konfigurasi tema lewat `@theme` di `globals.css`)
-- Motion (`motion/react`) untuk animasi scroll-reveal, hover, dan micro-interaction
+- React 19 and TypeScript
+- Tailwind CSS v4 (theme configured via `@theme` in `globals.css`)
+- Motion (`motion/react`) for scroll-reveal, hover, and micro-interaction animations
 
-## Struktur Proyek
+## Project Structure
 
 ```
 src/
   app/
-    layout.tsx        Metadata dan pengaturan font
-    page.tsx           Merangkai seluruh section halaman
-    globals.css        Tema warna biru muda dan utility class kustom
+    layout.tsx        Metadata and font settings
+    page.tsx           Assembles all page sections
+    globals.css        Light-blue colour theme and custom utility classes
   components/
-    Navbar.tsx          Navigasi sticky dengan efek blur saat scroll
-    Hero.tsx            Headline, kartu mengambang, statistik animasi
-    LogoMarquee.tsx      Logo klien berjalan otomatis
-    Services.tsx         Daftar jasa automasi
-    Products.tsx         Daftar produk toko automasi
-    HowItWorks.tsx        Tahapan proses kerja
-    Features.tsx          Alasan memilih AutoNova
-    Testimonials.tsx       Testimoni klien
-    Pricing.tsx             Paket harga
-    CTA.tsx                  Ajakan kontak/konsultasi
-    Footer.tsx                Tautan dan informasi perusahaan
-    icons.tsx                 Kumpulan ikon SVG pengganti emoji
-    AnimatedCounter.tsx        Komponen angka statistik yang menghitung naik
+    Navbar.tsx          Sticky navigation with a blur effect on scroll
+    Hero.tsx            Headline, floating cards, animated statistics
+    LogoMarquee.tsx      Automatically scrolling client logos
+    Services.tsx         Automation services list
+    Products.tsx         Automation store product list
+    HowItWorks.tsx        Work process stages
+    Features.tsx          Reasons to choose AutoNova
+    Testimonials.tsx       Client testimonials
+    Pricing.tsx             Pricing packages
+    CTA.tsx                  Contact/consultation call to action
+    Footer.tsx                Company links and information
+    icons.tsx                 Collection of SVG icons replacing emoji
+    AnimatedCounter.tsx        Statistics number component that counts up
   lib/
-    motion.ts                  Variant animasi Motion yang dipakai bersama
+    motion.ts                  Shared Motion animation variants
 ```
 
-## Menjalankan Proyek
+## Running the Project
 
-Install dependency (skrip instalasi dinonaktifkan lewat `.npmrc` untuk keamanan):
+Install dependencies (the install script is disabled via `.npmrc` for security):
 
 ```bash
 npm install
 ```
 
-Jalankan mode pengembangan:
+Run development mode:
 
 ```bash
 npm run dev
 ```
 
-Buka [http://localhost:3000](http://localhost:3000) di browser.
+Open [http://localhost:3000](http://localhost:3000) in the browser.
 
-Build untuk produksi:
+Build for production:
 
 ```bash
 npm run build
 npm run start
 ```
 
-Menjalankan lint:
+Run lint:
 
 ```bash
 npm run lint
 ```
 
-## Kustomisasi
+## Customisation
 
-- Warna tema biru muda diatur lewat variabel `--brand-*` di `src/app/globals.css`.
-- Konten jasa, produk, testimoni, dan paket harga berupa data array di masing-masing komponen pada `src/components/`, dapat diubah langsung tanpa menyentuh logika tampilan.
-- Nomor WhatsApp dan email kontak berada pada `src/components/CTA.tsx`.
-- Ikon dapat ditambah di `src/components/icons.tsx` mengikuti pola SVG stroke-based yang sudah ada.
+- The light-blue theme colour is set via the `--brand-*` variables in `src/app/globals.css`.
+- Service, product, testimonial, and pricing content is array data in each component under `src/components/`, and can be changed directly without touching the display logic.
+- The WhatsApp number and contact email are in `src/components/CTA.tsx`.
+- Icons can be added in `src/components/icons.tsx` following the existing stroke-based SVG pattern.
